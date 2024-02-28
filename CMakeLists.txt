@@ -83,6 +83,12 @@ configure_file(cmake/ParallelSTLConfig.cmake.in
                "${CMAKE_CURRENT_BINARY_DIR}/ParallelSTLConfig.cmake"
                @ONLY)
 
+export(
+  TARGETS ParallelSTL
+  NAMESPACE pstl::
+  FILE ParallelSTLTargets.cmake
+)
+
 install(TARGETS ParallelSTL
         EXPORT ParallelSTLTargets)
 install(EXPORT ParallelSTLTargets
